@@ -5,15 +5,24 @@
  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>          
  <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>   
  <script type="text/javascript">
+ 
  $(document).ready(function()
  {
+ 
  $("#insert").click(function(){
+	 
+	 alert("cliccou");
+ 
  var title=$("#title").val();
  var duration=$("#duration").val();
  var price=$("#price").val();
  var dataString="title="+title+"&duration="+duration+"&price="+price+"&insert=";
+ 
  if($.trim(title).length>0 & $.trim(duration).length>0 & $.trim(price).length>0)
  {
+	 
+	 	 alert("estrou no if");
+	 
  $.ajax({
  type: "POST",
  url:"http://evorion.com.br/post.php",
